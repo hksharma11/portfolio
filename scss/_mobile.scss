@@ -1,13 +1,18 @@
-// Widescreen
-
+// Widescreens
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-//Desktop & Laptops
+// Desktops & Laptops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-//Tablet ans small laptop
+// Tablets & Small Laptops
 @include mediaMd {
   main {
     align-items: center;
@@ -41,17 +46,43 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url("../img/sharma.jpg");
+      background: url("../img/sharma_small.jpg");
       width: 150px;
       height: 150px;
-      background-size: cover;
     }
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-//Smartphone
+// Smartphones
 @include mediaSm {
-  main#home h1 {
-    margin-top: 10vh;
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

@@ -11,27 +11,26 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
-  // Rotate into X with menu Line
+  // Rotate Into X With Menu Lines
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
-      // Line 1- Roate
+      // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
 
-      // Line 2 hide
+      // Line 2 - Hide
       &:nth-child(2) {
         opacity: 0;
       }
 
-      //Line 3 Roate
-
+      // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
       }
@@ -39,8 +38,7 @@
   }
 }
 
-//Menu Overlay
-
+// Menu Overlay
 .menu {
   position: fixed;
   top: 0;
@@ -73,18 +71,19 @@
     @include easeOut;
 
     &.show {
-      //Slide in fro top
+      // Slide in from top
       transform: translate3d(0, 0, 0);
     }
   }
 
-  // Brading Side
+  // Branding Side
   &-branding {
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
-
     @include easeOut;
+
     &.show {
+      // Slide in from bottom
       transform: translate3d(0, 0, 0);
     }
 
@@ -94,7 +93,6 @@
       background: url("../img/sharma.jpg");
       border-radius: 50%;
       border: solid 3px $secondary-color;
-      background-size: cover;
     }
   }
 
@@ -103,7 +101,7 @@
     @include easeOut;
 
     &.show {
-      //slide in from right
+      // Slide in from right
       transform: translate3d(0, 0, 0);
     }
 
@@ -119,7 +117,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
